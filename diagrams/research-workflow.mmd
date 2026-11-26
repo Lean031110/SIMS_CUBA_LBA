@@ -1,0 +1,10 @@
+flowchart TD
+ A[Read project state] --> B[Find highest-priority gap]
+ B --> C[Search public primary sources]
+ C --> D{Interactive access needed?}
+ D -->|Yes| E[Request legitimate user-provided evidence]
+ D -->|No| F[Verify claims]
+ E --> F
+ F --> G[Label confidence and status]
+ G --> H[Update inventory and source register]
+ H --> I[Review risks and next gap]
