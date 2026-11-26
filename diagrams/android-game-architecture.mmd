@@ -1,0 +1,15 @@
+flowchart TB
+ Client[Godot Android Client]
+ UI[HUD and Touch UI]
+ World[3D World and Avatar]
+ Net[HTTPS and WSS]
+ API[Worker API]
+ Zone[Zone Durable Object]
+ DB[(D1 / SQLite)]
+ Client --> UI
+ Client --> World
+ Client --> Net
+ Net --> API
+ Net --> Zone
+ API --> DB
+ Zone --> DB
