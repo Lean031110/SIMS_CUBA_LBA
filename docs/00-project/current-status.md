@@ -6,27 +6,42 @@
 **Plataforma objetivo:** aplicación Android instalable; APK para QA y AAB cuando corresponda a distribución.
 
 ## Qué se ha hecho
-- Se verificó que el repositorio existe, es público y permite escritura; estaba vacío al inicio.
-- Se inspeccionó el texto visible de cubitalife.com y sus términos públicos.
-- Se registró el HUD y los nombres de navegación públicos.
-- Se investigaron WebSockets y tiers gratuitos de Vercel, Cloudflare, Render y Supabase.
-- Se preparó una recomendación tecnológica provisional para Android y backend.
+- Repositorio público preparado con estructura de investigación, diseño, arquitectura, producción y agentes.
+- Inspección de la portada y términos oficiales de CubitaLife.
+- Revisión de una grabación de sesión autenticada aportada por el propietario en Android/Chrome.
+- Documentación de un mapa urbano isométrico de Camagüey, avatar/HUD, necesidades, cartera, misiones y teléfono virtual.
+- Apertura visual de pantallas de trabajo, vivienda, muebles, negocios, mercado, inventario, inversiones, banco, salud, comida, pareja/familia, viajes, ciudad, música, relojes, anuncios y CubaGram.
+- Separación explícita entre pantalla observada y acción/operación no probada.
+- Registro de afirmaciones secundarias no verificadas como preguntas pendientes.
+- Investigación inicial de WebSockets y opciones gratuitas de Vercel, Cloudflare, Render y Supabase.
+
+## Qué se ha verificado
+- La experiencia web se mostró funcionando en Chrome móvil durante la grabación aportada.
+- El mundo de esa sesión estaba en Camagüey; la portada pública también puede mostrar La Habana.
+- La interfaz contiene cuatro necesidades: energía, comida, humor y salud.
+- El teléfono actúa como hub de múltiples subsistemas de juego.
+- Hay pantallas dedicadas a profesión/economía, vivienda/vida diaria, social/familia, viajes/ciudad y entretenimiento.
+- Los detalles de pantallas y textos están registrados en evidence/observations/session-android-2026-11-26.md.
 
 ## Qué NO se ha verificado
-- No se ha iniciado sesión ni creado una cuenta de CubitaLife.
-- No se ha entrado en una partida interactiva; la representación pública muestra “Cargando el juego…” y “Vista previa no disponible en este dispositivo”.
-- No se ha comprobado el comportamiento de los botones, economía, trabajos, relaciones, viviendas o viajes.
-- Se desconocen motor, backend, esquema de datos, protocolo y hosting privado de CubitaLife.
-- No se ha probado en un teléfono Android real.
-- No hay APK, servidor ni build de producción.
+- No se probaron movimientos, colisiones, cámara interactiva ni capacidad concurrente.
+- No se completaron compras, ventas, inversiones, apuestas, transferencias, contrataciones, adopciones, viajes o publicaciones.
+- No se probó el efecto de botones, cálculos económicos, ciclos de necesidades, persistencia, sincronización o reconexión.
+- No se inspeccionaron APIs, código fuente privado, motor, base de datos ni infraestructura de CubitaLife.
+- No se comprobó una app Android nativa; el vídeo muestra Chrome móvil.
+- No hay cliente, servidor ni APK implementados.
 
 ## Próximos hitos
-1. Obtener evidencia visual/interactiva legítima de los flujos pendientes.
-2. Cerrar matriz de paridad y GDD Android.
-3. Validar ADR de motor y backend mediante prototipos.
-4. Crear prototipo local de avatar, cámara, controles táctiles y zona original.
-5. Añadir identidad, persistencia y primera conexión multijugador.
-6. Implementar la línea base de funciones verificadas antes de mejoras propias.
+1. Completar walkthrough seguro de movimiento/edificios y transiciones.
+2. Verificar ciclos de necesidades, empleo/formación, vivienda, compra/venta y viajes mediante observación antes/después; no gastar saldos ni publicar sin autorización.
+3. Cerrar matriz de paridad v1 y GDD Android por subsistema.
+4. Validar ADR de motor y backend mediante prototipos.
+5. Crear prototipo local de avatar, cámara, controles táctiles y zona original.
+6. Añadir identidad, persistencia y primera conexión multijugador.
+7. Implementar la línea base de capacidades priorizadas antes de mejoras propias.
 
-## Bloqueos
-Para inspeccionar pantallas autenticadas, el propietario debe compartir capturas/vídeo de su sesión legítima o facilitar un contexto de navegador autorizado. No compartir contraseñas. La política de edad, nombre final, licencia y monetización siguen pendientes.
+## Bloqueos / límites
+- La inspección se basa en una sesión/una cuenta; la disponibilidad puede variar entre jugadores.
+- El juego declara ser para mayores de 18 años; SIMS CUBA LBA necesita definir su propia política de edad y seguridad.
+- La política de privacidad, moderación, marca y licencia siguen pendientes.
+- La grabación original no se publica en Git porque contiene identificadores del jugador y nombres de terceros.
