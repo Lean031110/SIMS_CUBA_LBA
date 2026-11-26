@@ -1,0 +1,12 @@
+flowchart LR
+ Android[Android Client]
+ Web[Future Web Client]
+ API[Versioned Game API]
+ Auth[Identity]
+ State[Canonical Player State]
+ DB[(Persistent Database)]
+ Android --> API
+ Web --> API
+ API --> Auth
+ API --> State
+ State --> DB
