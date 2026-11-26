@@ -1,0 +1,7 @@
+flowchart LR
+ A[Android Godot] -->|HTTPS| B[API Worker]
+ A -->|WSS| C[Zone Durable Object]
+ B --> D[(D1 / SQLite)]
+ C --> D
+ B --> E[Auth and validation]
+ C --> F[Realtime presence and zone state]
