@@ -1,0 +1,17 @@
+/.godot/
+/export.cfg
+/export_presets.cfg
+/build/
+/dist/
+*.apk
+*.aab
+*.keystore
+*.jks
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
