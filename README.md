@@ -21,7 +21,8 @@ Crear un simulador social de vida cubana con capacidades funcionales comparables
 ## Arquitectura provisional
 - Cliente: Godot 4.7.2 estable + GDScript como candidato; validar exportación Android y rendimiento en dispositivo real.
 - Android: objetivo de publicación exige target API 36 desde el 31-08-2026. Debe probarse la combinación exacta de Godot, SDK y plantilla antes de fijarla.
-- Backend piloto: Cloudflare Workers + Durable Objects/SQLite + D1 como candidato, no aprobado para producción.
+- Backend piloto: Cloudflare Workers + Durable Objects/SQLite es un candidato; la persistencia global (D1, DO SQLite o PostgreSQL) no está decidida.
+- Alternativa de servidor de juego: comparar Colyseus o Nakama self-hosted, que requieren una máquina y operación propias.
 - Vercel WebSockets ya es GA desde 20-10-2026; las conexiones siguen sujetas a duración de Function y requieren reconexión/estado externo.
 - Ningún tier gratuito se considera producción 24/7 ni capacidad ilimitada.
 
@@ -33,31 +34,31 @@ Crear un simulador social de vida cubana con capacidades funcionales comparables
 5. Construir un vertical slice original solo después de superar los gates.
 
 ## Estructura
-- `AGENTS.md`: reglas de agentes.
-- `docs/00-project/`: estado e índice.
-- `docs/01-reference-research/`: investigación, inventario y matriz.
-- `docs/02-product-vision/`: visión de producto.
-- `docs/03-game-design/`: GDD y paridad.
-- `docs/04-technical-architecture/`: arquitectura y ADR.
-- `docs/05-platforms/`: Android y compilación.
-- `docs/06-production/`: roadmap y backlog.
-- `docs/07-deployment/`: hosting.
-- `docs/08-agent-workflow/`: instrucciones para agentes.
-- `evidence/`: fuentes y observaciones.
-- `decisions/`: preguntas y riesgos.
+- AGENTS.md: reglas de agentes.
+- docs/00-project/: estado e índice.
+- docs/01-reference-research/: investigación, inventario y matriz.
+- docs/02-product-vision/: visión de producto.
+- docs/03-game-design/: GDD y paridad.
+- docs/04-technical-architecture/: arquitectura y ADR.
+- docs/05-platforms/: Android y compilación.
+- docs/06-production/: roadmap y backlog.
+- docs/07-deployment/: hosting.
+- docs/08-agent-workflow/: instrucciones para agentes.
+- evidence/: fuentes y observaciones.
+- decisions/: preguntas y riesgos.
 
 ## Evidencia
 Cada hallazgo debe usar exactamente uno de estos estados principales:
-- `CONFIRMED`: visible o ejecutado directamente en evidencia primaria; indicar si solo se confirmó UI.
-- `DOCUMENTED`: declarado por fuente primaria oficial, sin prueba propia.
-- `HYPOTHESIS`: inferencia aún no confirmada.
-- `PROPOSAL`: diseño propio recomendado, sujeto a aprobación.
-- `PENDING`: falta evidencia o decisión.
+- CONFIRMED: visible o ejecutado directamente en evidencia primaria; indicar si solo se confirmó UI.
+- DOCUMENTED: declarado por fuente primaria oficial, sin prueba propia.
+- HYPOTHESIS: inferencia aún no confirmada.
+- PROPOSAL: diseño propio recomendado, sujeto a aprobación.
+- PENDING: falta evidencia o decisión.
 
-No convertir un botón visible en una acción probada. Registrar URL, fecha de consulta/publicación, procedencia, alcance y confianza en `evidence/source-register.md`.
+No convertir un botón visible en una acción probada. Registrar URL, fecha de consulta/publicación, procedencia, alcance y confianza en evidence/source-register.md.
 
 ## Propiedad intelectual y seguridad
 No copiar código, assets, modelos, texturas, música, marca, textos expresivos ni composiciones identificables de CubitaLife. No guardar credenciales, tokens, datos privados ni grabaciones sin redactar en Git. No crear cuentas ni ejecutar compras, publicaciones o contactos de terceros para investigar.
 
 ## Licencia y decisiones sensibles
-La licencia del código, la política de edad, marca, economía, monetización y pagos no están aprobadas. No decidirlas unilateralmente; ver `LICENSE_DECISION.md` y `decisions/open-questions.md`.
+La licencia del código, la política de edad, marca, economía, monetización y pagos no están aprobadas. No decidirlas unilateralmente; ver LICENSE_DECISION.md y decisions/open-questions.md.
