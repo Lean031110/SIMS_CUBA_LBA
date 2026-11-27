@@ -1,62 +1,63 @@
-# SIMS CUBA LBA — Android Life Simulator
+# SIMS CUBA LBA — simulador de vida cubana para Android
 
-> Documentación, investigación de referencia y plan técnico para crear un simulador social de vida ambientado en Cuba, con Android como plataforma principal.
+> Investigación, diseño y preparación técnica de un simulador social de vida ambientado en Cuba. Android instalable es la plataforma principal.
 
-**Estado:** investigación y preproducción. Este repositorio contiene documentación y controles del proyecto, no una implementación jugable ni un APK.
+**Estado al 27-11-2026:** fase 0 — investigación y preproducción. No hay código jugable, servidor, APK ni despliegue del juego.
 
-**Referencia funcional investigada:** https://cubitalife.com/  
+**Referencia funcional pública:** https://cubitalife.com/  
 **Repositorio:** https://github.com/Lean031110/SIMS_CUBA_LBA  
-**Nombre de trabajo:** SIMS CUBA LBA. El nombre final, identidad visual y marca quedan pendientes de decisión.
+**Nombre de trabajo:** SIMS CUBA LBA. Marca, identidad visual y nombre final pendientes.
 
 ## Objetivo
-Construir para Android una experiencia social de simulación de vida cubana que alcance paridad funcional con las capacidades de CubitaLife que puedan verificarse. La implementación será independiente: código, personajes, modelos, texturas, escenarios, música, textos, interfaz y marca originales. La paridad se medirá por capacidades y flujos del jugador, no por copiar código, assets ni pantallas protegidas.
+Crear un simulador social de vida cubana con capacidades funcionales comparables a las que puedan verificarse de CubitaLife, pero con implementación independiente: código, mundo, personajes, arte, música, textos, interfaz y marca originales. Se estudian flujos y capacidades, no se copian recursos ni expresión protegida.
 
-## Hallazgo principal — sesión real
-El 26-11-2026 se revisó una grabación de una sesión autenticada en Chrome para Android. La partida mostraba Camagüey, un mundo isométrico con establecimientos/avatares y un HUD con cartera, diamantes y cuatro necesidades. El teléfono virtual abría módulos de trabajo, universidad, negocios, vivienda, muebles, mercado, inventario, salud, comida, viajes, banco, inversión, pareja/familia, música, ciudad, relojes, anuncios y CubaGram.
+## Estado de investigación
+- Una grabación de sesión autenticada en Chrome/Android del 26-11-2026 permitió auditar visualmente mapa de Camagüey, HUD, teléfono virtual y múltiples módulos. Ver [registro cronológico](evidence/observations/session-android-2026-11-26.md).
+- La grabación muestra pantallas y textos, no transacciones completas. Movimiento, cámara efectiva, persistencia, economía real del juego y sincronización siguen pendientes.
+- La portada y los términos oficiales se reconsultaron el 27-11-2026. Los términos siguen indicando última actualización 12-11-2026.
+- El mayor vacío sigue siendo el comportamiento: onboarding/creación de personaje/spawn, controles, transiciones y resultados antes/después.
+- El propietario debe aportar una nueva grabación de su sesión legítima para cerrar esos puntos. Ver [plan de captura](evidence/observations/next-session-capture-plan-2026-11-27.md).
 
-**Importante:** se inspeccionaron pantallas, no se completaron transacciones. El vídeo original no se sube porque contiene identificadores de cuenta y nombres de otros jugadores. El detalle cronológico y los límites de evidencia están en [la observación de sesión](evidence/observations/session-android-2026-11-26.md).
+## Arquitectura provisional
+- Cliente: Godot 4.7.2 estable + GDScript como candidato; validar exportación Android y rendimiento en dispositivo real.
+- Android: objetivo de publicación exige target API 36 desde el 31-08-2026. Debe probarse la combinación exacta de Godot, SDK y plantilla antes de fijarla.
+- Backend piloto: Cloudflare Workers + Durable Objects/SQLite + D1 como candidato, no aprobado para producción.
+- Vercel WebSockets ya es GA desde 20-10-2026; las conexiones siguen sujetas a duración de Function y requieren reconexión/estado externo.
+- Ningún tier gratuito se considera producción 24/7 ni capacidad ilimitada.
 
-## Orden de producto
-1. Investigar/documentar comportamientos con evidencia.
-2. Cerrar el alcance de paridad funcional y requisitos Android.
-3. Crear prototipo técnico y una primera zona vertical.
-4. Completar línea base priorizada de capacidades verificadas.
-5. Priorizar mejoras propias y diferenciadoras después.
-
-## Estado actual
-- Rama principal main; trabajo de investigación en ramas research/.
-- Sesión móvil real visualmente auditada; comportamiento transaccional y persistencia siguen pendientes.
-- Motor provisional: Godot 4.x + GDScript, sujeto a benchmark Android.
-- Backend de prototipo: Cloudflare Workers + Durable Objects + D1/SQLite, sujeto a benchmark y límites gratuitos.
-- Vercel puede servir web pública y APIs/WebSockets acotados, pero no se recomienda como único host de mundo persistente.
-- No hay cliente, servidor ni APK implementados.
+## Orden de trabajo
+1. Cerrar evidencia de onboarding, spawn, movimiento/cámara y flujos no destructivos.
+2. Convertir evidencia en matriz de paridad y GDD aprobado.
+3. Probar exportación Android target API 36 y benchmark gráfico/térmico.
+4. Hacer spike de backend y carga; medir latencia desde las regiones objetivo.
+5. Construir un vertical slice original solo después de superar los gates.
 
 ## Estructura
-- AGENTS.md — instrucciones obligatorias para agentes.
-- .github/copilot-instructions.md — reglas de Copilot.
-- docs/00-project/ — estado, alcance e índice.
-- docs/01-reference-research/ — investigación de CubitaLife, inventario y análisis.
-- docs/02-product-vision/ — visión y principios.
-- docs/03-game-design/ — especificación de paridad y GDD.
-- docs/04-technical-architecture/ — motor, cliente, backend, red, datos y ADRs.
-- docs/05-platforms/ — requisitos Android y compilación.
-- docs/06-production/ — roadmap, backlog y QA.
-- docs/07-deployment/ — hosting.
-- docs/08-agent-workflow/ — roles y tareas de agentes.
-- evidence/ — registro de fuentes y observaciones.
-- diagrams/ — diagramas Mermaid.
-- decisions/ — supuestos, preguntas y riesgos.
+- `AGENTS.md`: reglas de agentes.
+- `docs/00-project/`: estado e índice.
+- `docs/01-reference-research/`: investigación, inventario y matriz.
+- `docs/02-product-vision/`: visión de producto.
+- `docs/03-game-design/`: GDD y paridad.
+- `docs/04-technical-architecture/`: arquitectura y ADR.
+- `docs/05-platforms/`: Android y compilación.
+- `docs/06-production/`: roadmap y backlog.
+- `docs/07-deployment/`: hosting.
+- `docs/08-agent-workflow/`: instrucciones para agentes.
+- `evidence/`: fuentes y observaciones.
+- `decisions/`: preguntas y riesgos.
 
-## Empezar con agentes
-1. Leer AGENTS.md y este README.
-2. Leer docs/00-project/current-status.md.
-3. Leer docs/01-reference-research/cubitalife-deep-research.md, known-features-inventory.md y cubitalife-gameplay-systems-catalog.md.
-4. Leer evidence/observations/session-android-2026-11-26.md.
-5. Continuar con docs/08-agent-workflow/ANDROID_IMPLEMENTATION_AGENT.md.
-6. No intentar construir todo en un solo paso; comenzar por prototipo y criterios de aceptación.
+## Evidencia
+Cada hallazgo debe usar exactamente uno de estos estados principales:
+- `CONFIRMED`: visible o ejecutado directamente en evidencia primaria; indicar si solo se confirmó UI.
+- `DOCUMENTED`: declarado por fuente primaria oficial, sin prueba propia.
+- `HYPOTHESIS`: inferencia aún no confirmada.
+- `PROPOSAL`: diseño propio recomendado, sujeto a aprobación.
+- `PENDING`: falta evidencia o decisión.
 
-## Regla de evidencia
-Etiquetar cada hallazgo como CONFIRMED_UI, OBSERVED_COPY, DOCUMENTED, HYPOTHESIS, PROPOSAL, NOT_TESTED o PENDING. Un botón observado no demuestra su efecto. Incluir URL, fecha, tipo de evidencia y confianza en evidence/source-register.md.
+No convertir un botón visible en una acción probada. Registrar URL, fecha de consulta/publicación, procedencia, alcance y confianza en `evidence/source-register.md`.
 
 ## Propiedad intelectual y seguridad
-No copiar código, recursos, modelos, texturas, audio, marca, textos expresivos ni composiciones visuales exactas de CubitaLife. No almacenar credenciales, tokens ni datos personales. La licencia del código aún no está decidida; ver LICENSE_DECISION.md.
+No copiar código, assets, modelos, texturas, música, marca, textos expresivos ni composiciones identificables de CubitaLife. No guardar credenciales, tokens, datos privados ni grabaciones sin redactar en Git. No crear cuentas ni ejecutar compras, publicaciones o contactos de terceros para investigar.
+
+## Licencia y decisiones sensibles
+La licencia del código, la política de edad, marca, economía, monetización y pagos no están aprobadas. No decidirlas unilateralmente; ver `LICENSE_DECISION.md` y `decisions/open-questions.md`.
