@@ -16,7 +16,7 @@ Crear y vivir una vida virtual en una Cuba contemporánea estilizada: recorrer e
 
 ## Base de referencia observada
 
-La sesión aportada el 26-11-2026 permite confirmar visualmente pantallas y módulos, no sus operaciones. El inventario detallado está en known-features-inventory.md y el catálogo en cubitalife-gameplay-systems-catalog.md.
+La sesión aportada el 26-11-2026 permite confirmar visualmente pantallas y módulos, no sus operaciones. El [inventario detallado](../01-reference-research/known-features-inventory.md) y el [catálogo funcional](../01-reference-research/cubitalife-gameplay-systems-catalog.md) registran el alcance exacto.
 
 | Sistema de referencia | Estado de evidencia | Implicación de diseño para SIMS CUBA LBA |
 |---|---|---|
