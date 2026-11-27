@@ -1,6 +1,17 @@
 # Especificación Android de paridad funcional
 
-La base de referencia incluye una sesión real con múltiples pantallas y sistemas. La paridad se definirá por **capacidades y flujos**, nunca copiando código, arte, marca, textos expresivos o composición visual exacta. CONFIRMED_UI indica que una pantalla se observó abierta; los efectos no probados no deben transformarse en requisitos cerrados.
+**Corte:** 27-11-2026. La paridad se define por capacidades y flujos, nunca copiando código, arte, marca, textos expresivos o composición visual exacta.
+
+La sesión del 26-11 confirma pantallas de muchos subsistemas. **CONFIRMED como UI no significa que la acción funcione ni que persista.** El inventario marca el alcance exacto. Primer registro/personaje/spawn y movimiento/cámara siguen PENDING.
+
+## Gate 0 — antes de cerrar la paridad v1
+- Capturar onboarding, personaje, primer spawn y tutorial en sesión legítima.
+- Observar movimiento, cámara, colisiones, selección de edificios y entrada/salida.
+- Capturar precondición, acción, resultado, error y persistencia; no inferir efectos por etiquetas.
+- No resetear cuenta, gastar moneda, publicar, enviar mensajes ni modificar relaciones para obtener evidencia.
+- Probar exportación Godot Android con target API 36.
+- Medir una escena original en teléfono real.
+- Comparar backend DO con una alternativa self-hosted.
 
 ## 1. Entrada, cuenta y personaje
 - Registro, acceso, perfil y guardado de progreso con identidad y UX originales.
@@ -8,7 +19,7 @@ La base de referencia incluye una sesión real con múltiples pantallas y sistem
 - Un personaje con localización, ocupación/condición, atributos, cartera y reputación.
 - Guardado y sincronización de partida con servidor autoritativo.
 
-Aceptación: recuperar partida de prueba sin duplicar progreso ni saldo; todas las mutaciones sensibles verificadas en servidor.
+Aceptación: recuperar partida de prueba sin duplicar progreso ni saldo; todas las mutaciones sensibles verificadas en servidor. El flujo de primer personaje/spawn de referencia sigue PENDING.
 
 ## 2. Mundo, mapa y HUD
 - Mundo 3D isométrico/original con barrios, calles, edificios/puntos de interés y presencia de otros jugadores.
@@ -21,7 +32,7 @@ Aceptación: selección de punto, navegación y colisiones comprobadas; render e
 ## 3. Teléfono como hub
 - Lanzador de aplicaciones temáticas con búsqueda.
 - Categorías separadas para Casa, Trabajo, Social, Dinero, Ciudad, Viajes y entretenimiento.
-- Dock/context actions para las tareas frecuentes.
+- Dock/context actions para tareas frecuentes.
 - Navegación entre módulos que preserve estado y permita volver al mundo.
 
 Aceptación: módulos desacoplados, deep links internos y retorno seguro al juego sin perder selección.
@@ -77,4 +88,4 @@ Aceptación: flujos de privacidad y moderación probados con cuentas ficticias a
 - Cualquier monetización requerirá revisión legal, políticas de edad, países, reembolsos y protección de datos.
 
 ## 11. Restricciones Android
-App instalable nativa; pausa/reanudación; reconexión con backoff; snapshots autoritativos; presets gráficos; gestión térmica, batería y memoria; permisos mínimos. Godot 4.x + GDScript permanece como decisión provisional hasta un benchmark real.
+App instalable nativa; pausa/reanudación; reconexión con backoff; snapshots autoritativos; presets gráficos; gestión térmica, batería y memoria; permisos mínimos. Godot 4.7.2 + GDScript permanece como candidato hasta validar target API 36 y benchmark real.

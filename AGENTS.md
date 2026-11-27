@@ -1,37 +1,44 @@
 # AGENTS.md — reglas obligatorias
 
 ## Misión
-Trabajar en SIMS CUBA LBA: un simulador social de vida cubana para Android con paridad funcional documentada respecto a la experiencia pública de CubitaLife y una implementación original.
+Preparar SIMS CUBA LBA: simulador social de vida cubana Android-first, con investigación funcional verificable de CubitaLife y una implementación original.
 
 ## Antes de cada tarea
-1. Leer este archivo y README.
-2. Leer el estado del proyecto, preguntas abiertas y backlog.
-3. Revisar el estado del repositorio y los últimos commits.
-4. Verificar la vigencia de fuentes, precios, límites, SDKs y políticas.
-5. Definir criterios de aceptación y riesgos antes de modificar archivos.
+1. Leer README, AGENTS, estado, preguntas y backlog.
+2. Revisar commit, ramas, PRs y árbol antes de editar.
+3. Reutilizar evidencia existente; no repetir investigación ya cerrada sin motivo.
+4. Comprobar fuentes, fechas, SDKs, políticas y límites vigentes.
+5. Definir criterio de aceptación, riesgo y alcance del cambio.
+
+## Estados de evidencia obligatorios
+Usar un único estado principal por hallazgo:
+- CONFIRMED: observado directamente en evidencia primaria. Especificar si confirma solo la existencia de UI o también una acción/resultado.
+- DOCUMENTED: declarado en una fuente primaria oficial, sin verificación independiente.
+- HYPOTHESIS: inferencia no probada.
+- PROPOSAL: diseño o decisión sugerida para SIMS CUBA LBA.
+- PENDING: sin evidencia suficiente o decisión abierta.
+
+Añadir tipo de evidencia (pantalla, texto, acción, persistencia, fuente oficial), URL/procedencia, fecha de consulta/publicación y confianza. No usar estados secundarios como sustituto de estos cinco.
 
 ## Investigación y propiedad intelectual
-- Investigar solo información pública y pantallas a las que el usuario tenga acceso legítimo.
-- No eludir login, paywalls, controles de acceso, rate limits ni medidas anti-bot.
-- No extraer ni reutilizar código privado, assets, modelos, texturas, audio, textos expresivos, logotipos o diseños identificables de CubitaLife.
-- Se permite documentar funciones y comportamientos observables para implementar una alternativa independiente.
-- No crear cuentas, comprar moneda, publicar, contactar jugadores ni modificar datos de terceros.
-- Marcar todo hallazgo como CONFIRMED, DOCUMENTED, HYPOTHESIS, PROPOSAL o PENDING.
+- Solo información pública y pantallas a las que el propietario tenga acceso legítimo.
+- No eludir login, paywalls, controles de acceso, rate limits ni anti-bot.
+- No reutilizar código, assets, modelos, texturas, audio, textos expresivos, logos o diseño identificable de CubitaLife.
+- No crear cuentas, comprar moneda, publicar, enviar mensajes ni modificar datos de terceros.
+- Una captura de una pantalla no demuestra que la operación funcione; registrar precondición, acción, salida y persistencia.
 
 ## Desarrollo
-- Android nativo es la primera plataforma. No sustituirlo por una WebView simple sin ADR aprobado.
-- Tecnología provisional: Godot 4.x + GDScript.
+- Android instalable nativo es el objetivo primario; no sustituirlo por WebView sin ADR aprobado.
+- Godot 4.7.2 + GDScript es candidato, no decisión final hasta benchmark y prueba de target API 36.
 - Separar presentación, mundo, dominio, red, almacenamiento y contenido.
-- El servidor será autoridad para moneda, inventario, trabajos, progreso, relaciones y acciones con consecuencias.
-- El cliente nunca decide por sí solo saldo, recompensas ni inventario final.
-- Usar operaciones idempotentes y ledger auditable.
+- El servidor valida moneda, inventario, trabajos, progreso, relaciones y acciones con consecuencias.
+- Usar operaciones idempotentes, ledger auditable, reconexión y recuperación de snapshots.
 - No guardar secretos, tokens, credenciales, claves de firma ni datos personales en Git.
-- No añadir pagos reales hasta aprobar políticas, proveedor, reembolsos y privacidad.
+- No implementar pagos reales ni definir edad, licencia o marca sin aprobación explícita.
 
 ## Calidad y cambios
 - Cada cambio de código incluye pruebas y manejo de errores.
-- No declarar una build exitosa si no se ejecutó.
+- No declarar builds, pruebas físicas ni despliegues si no se ejecutaron.
 - Trabajar en ramas docs/, feat/, fix/ o research/.
-- Mantener PRs pequeños; no hacer force-push a main.
-- No cambiar licencia, pagos, edad, visibilidad o marca sin autorización explícita.
-- Entregar archivos cambiados, evidencia, pruebas, riesgos y siguiente tarea.
+- No hacer force-push ni merge automático.
+- Entregar archivos, evidencia, limitaciones, riesgos y siguiente tarea.

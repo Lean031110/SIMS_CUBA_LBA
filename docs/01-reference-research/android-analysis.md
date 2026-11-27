@@ -19,5 +19,28 @@ La grabación del 26-11-2026 muestra CubitaLife funcionando en Chrome móvil en 
 - Permisos mínimos y privacidad.
 - Pruebas en teléfono real, no solo emulador.
 
-## Pendiente
-Definir versión mínima de Android, RAM/GPU objetivo, tamaño APK, FPS target, resolución, política de orientación y requisitos offline mediante benchmark de una primera escena original.
+## Revalidación de toolchain — 27-11-2026
+
+### Versiones del motor
+- **CONFIRMED:** Godot 4.7.2 figura como versión estable y fue publicada el 18-08-2026.
+- **DOCUMENTED:** Godot 4.8 beta 5 fue publicada el 24-11-2026. Sigue siendo una versión pre-release; no se debe fijar como base de producción mientras no sea estable.
+- **DOCUMENTED:** la documentación estable de exportación Android recomienda OpenJDK 17, Android Platform 35, Build-Tools 35.0.1, NDK r28b (28.1.13356709) y CMake 3.10.2.4988404.
+- **DOCUMENTED:** la documentación latest/unstable, que ya refleja cambios de Godot 4.8, muestra setup automático y un toolchain diferente: Platform 36, Build-Tools 36.1.0, NDK 29.0.14206865 y CMake 3.22.1.
+
+### Requisito Google Play
+- **DOCUMENTED:** desde el 31-08-2026, nuevas aplicaciones y actualizaciones enviadas a Google Play deben targetear Android 16 / API 36 o superior.
+- **PENDING:** no se ha demostrado que la plantilla estable de Godot 4.7.2 exporte correctamente un APK con target API 36. La guía estable consultada todavía enumera Platform 35; la guía latest de 4.8 no puede tratarse como prueba para 4.7.2.
+- **Riesgo:** el motor estable recomendado y el requisito de publicación pueden necesitar una configuración Gradle/plantilla específica. No asumir compatibilidad por el mero hecho de instalar Android SDK 36.
+
+### Gate técnico obligatorio
+Antes de fijar la versión del motor:
+1. Crear un proyecto Godot vacío en 4.7.2 estable.
+2. Instalar JDK 17 y los paquetes Android que exige la guía estable; mantener también Platform 36 y Build-Tools 36.1.0 disponibles para la prueba.
+3. Exportar APK debug con target API 36 usando la plantilla oficial. Si no es posible, probar la ruta Gradle personalizada documentada por Godot y registrar todos los cambios.
+4. Inspeccionar el manifiesto final para confirmar targetSdkVersion 36; no basta con que el proyecto compile.
+5. Instalar y ejecutar en un Android 16 real y en al menos un Android anterior compatible.
+6. Repetir como comparación con Godot 4.8 beta 5, pero no promover beta a estable por ganar la prueba.
+7. Registrar versiones exactas, logs, tamaño, ABI, errores y checksum.
+
+## Pendiente de dispositivo
+Definir versión mínima de Android, RAM/GPU objetivo, tamaño APK, FPS target, resolución, política de orientación y requisitos offline mediante benchmark de una primera escena original en un teléfono real.
