@@ -8,8 +8,10 @@
 ## Estado del repositorio
 - Rama principal: main; último commit revisado en main: de5cd1022183e0c3d5c30368d29e9d9e6dafb7c7.
 - PR #4 (auditoría visual de sesión) continúa abierto y sin merge.
-- Rama de esta revisión: research/2026-11-27-evidence-and-platform-revalidation, apilada sobre la rama del PR #4 para evitar duplicar su diff.
-- Los cambios de esta revisión son documentales; no se modificó main.
+- PR #5 (revalidación Android API 36 y backend realtime) está abierto, apilado sobre la rama del PR #4; GitHub lo reporta mergeable/clean al 27-11-2026.
+- Rama de esta revisión: research/2026-11-27-evidence-and-platform-revalidation.
+- Último commit documental revisado antes de esta actualización: b58638cd6c52c32aadc28078410b7da9cb6ecaec.
+- Los cambios son documentales; no se modificó main.
 - No hay implementación jugable, APK, backend ni despliegue.
 
 ## Qué está confirmado
