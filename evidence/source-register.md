@@ -1,24 +1,34 @@
-# Registro de fuentes — revisión 26-11-2026
+# Registro de fuentes — revisión 27-11-2026
 
-| ID | Fuente | Fecha | Tipo | Qué apoya | Confianza |
+| ID | Fuente | Fecha de publicación/actualización y consulta | Tipo | Qué apoya | Confianza |
 |---|---|---|---|---|---|
-| SRC-001 | https://cubitalife.com/ | Consulta 26-11-2026 | Primaria oficial | Descripción, formulario, HUD y controles declarados | Alta para texto/UI pública |
-| SRC-002 | https://cubitalife.com/terminos.html | Actualizado 12-11-2026; consulta 26-11-2026 | Primaria oficial/legal | Edad, cuenta/dispositivo, normas, monedas, diamantes, pagos, datos, anuncios y desarrollo | Alta para lo declarado |
-| SRC-003 | Grabación de sesión autenticada en Android/Chrome aportada por el propietario; detalle en evidence/observations/session-android-2026-11-26.md | 26-11-2026 | Evidencia visual primaria de una sesión | Mundo Camagüey, HUD, teléfono y pantallas de trabajo, vivienda, dinero, social, economía, salud, ciudad, viajes y CubaGram | Alta para pantallas/textos vistos; baja para efectos no ejecutados |
-| SRC-004 | https://averquesale.com/blog/enterate-en-avqs/cubitalife-el-simulador-que-te-permite-construir-tu-propia-vida-en-cuba | 15-11-2026 | Prensa secundaria | Relato de inicio aleatorio, remesas, movilidad y actividades delictivas | Media/baja; no confirmado por fuente primaria |
-| SRC-005 | https://soflowheelielife.com/cubita-life-game | Consulta 26-11-2026 | Página no oficial | Resumen general repetitivo | Baja; no usar como autoridad |
-| SRC-006 | https://vercel.com/changelog/websocket-support-is-now-generally-available | 20-10-2026 | Documentación oficial | WebSockets GA en Vercel Functions | Alta |
-| SRC-007 | https://vercel.com/kb/guide/do-vercel-serverless-functions-support-websocket-connections | 2026 | Documentación oficial | Pinning, cierre por duración máxima, reconexión y estado externo | Alta |
-| SRC-008 | https://developers.cloudflare.com/workers/platform/limits/ | 25-11-2026 | Documentación oficial | Límites Workers Free | Alta |
-| SRC-009 | https://developers.cloudflare.com/durable-objects/platform/pricing/ | 13-11-2026 | Documentación oficial | Cuotas DO SQLite y Workers Free | Alta |
-| SRC-010 | https://developers.cloudflare.com/durable-objects/best-practices/websockets/ | 18-11-2026 | Documentación oficial | WebSockets/Hibernation | Alta |
-| SRC-011 | https://supabase.com/docs/guides/realtime/limits | 29-10-2026 | Documentación oficial | Límites Realtime Free | Alta |
-| SRC-012 | https://supabase.com/pricing | Consulta 26-11-2026 | Precio oficial | Free y pausa por inactividad | Alta; revisar antes de deploy |
-| SRC-013 | https://render.com/docs/free | Consulta 26-11-2026 | Documentación oficial | Spin-down, filesystem efímero y expiración DB Free | Alta |
-| SRC-014 | https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html | Consulta 26-11-2026 | Documentación oficial | Exportación Android y tooling | Alta; fijar versión al iniciar código |
-| SRC-015 | https://docs.godotengine.org/en/latest/tutorials/export/exporting_for_web.html | Consulta 26-11-2026 | Documentación oficial | Restricciones de exportación web | Alta |
+| SRC-001 | https://cubitalife.com/ | Página viva; consulta 27-11-2026 | Primaria oficial | Descripción, registro/login visible, HUD de ejemplo, navegación y controles declarados | Alta para texto/UI pública; no prueba mecánicas |
+| SRC-002 | https://cubitalife.com/terminos.html | Última actualización declarada 12-11-2026; consulta 27-11-2026 | Primaria oficial/legal | Edad 18+, cuenta/dispositivo, normas, monedas, diamantes, pagos, reembolsos, datos y anuncios | Alta para lo declarado |
+| SRC-003 | Grabación aportada por el propietario; ficha evidence/observations/session-android-2026-11-26.md | Grabación 26-11-2026; revisión 27-11-2026 | Evidencia visual primaria de una sesión | Mapa Camagüey, HUD, teléfono y pantallas de múltiples módulos | Alta para UI/textos vistos; no demuestra transacciones |
+| SRC-004 | https://averquesale.com/blog/enterate-en-avqs/cubitalife-el-simulador-que-te-permite-construir-tu-propia-vida-en-cuba | Publicación 15-11-2026; consulta previa 26-11-2026 | Prensa secundaria | Relatos de spawn aleatorio, remesas, movilidad y delitos | Media/baja; no confirmado por fuente primaria |
+| SRC-005 | https://soflowheelielife.com/cubita-life-game | Consulta previa 26-11-2026 | Página no oficial | Resumen general repetitivo | Baja; no usar como autoridad |
+| SRC-006 | https://vercel.com/changelog/websocket-support-is-now-generally-available | Publicación 20-10-2026; consulta 27-11-2026 | Documentación oficial | WebSockets GA en Vercel Functions y mismos límites/precios de Functions | Alta |
+| SRC-007 | https://vercel.com/docs/functions/configuring-functions/duration | Última actualización 24-08-2026; consulta 27-11-2026 | Documentación oficial | Duración máxima de Functions: Hobby 300 s; Pro/Enterprise 800 s y beta de 1800 s | Alta |
+| SRC-008 | https://developers.cloudflare.com/workers/platform/limits/ | Última actualización 24-08-2026; consulta 27-11-2026 | Documentación oficial | Workers Free: 100k solicitudes/día, 10 ms CPU, 128 MB, 50 subrequests y 6 conexiones salientes simultáneas | Alta |
+| SRC-009 | https://developers.cloudflare.com/durable-objects/platform/pricing/ | Última actualización 13-11-2026; consulta 27-11-2026 | Documentación oficial | Cuotas y precios DO SQLite; Hibernation y facturación de WebSocket | Alta |
+| SRC-010 | https://developers.cloudflare.com/durable-objects/platform/limits/ | Última actualización 13-11-2026; consulta 27-11-2026 | Documentación oficial | 5 GB Free, 100 clases DO Free, límites de CPU, mensajes y SQL | Alta |
+| SRC-011 | https://developers.cloudflare.com/durable-objects/best-practices/websockets/ | Última actualización 23-09-2026; consulta 27-11-2026 | Documentación oficial | WebSocket Hibernation, clientes conectados durante la hibernación y restauración de estado | Alta |
+| SRC-012 | https://supabase.com/docs/guides/realtime/limits | Última actualización 29-10-2026; consulta 27-11-2026 | Documentación oficial | Supabase Realtime Free: 200 conexiones concurrentes, 100 mensajes/s | Alta |
+| SRC-013 | https://supabase.com/docs/guides/platform/free-project-pausing | Última actualización 22-09-2026; consulta 27-11-2026 | Documentación oficial | Proyectos Free pueden pausarse tras 7 días con poca actividad de base de datos | Alta |
+| SRC-014 | https://render.com/docs/free | Página viva; consulta 27-11-2026 | Documentación oficial | Render Free: spin-down tras 15 min, arranque aproximado de 1 min, filesystem efímero, Postgres expira a 30 días y 750 horas/mes | Alta |
+| SRC-015 | https://godotengine.org/article/maintenance-release-godot-4-7-2/ | Publicación 18-08-2026; consulta 27-11-2026 | Fuente oficial del motor | Godot 4.7.2 estable y cambios de mantenimiento | Alta |
+| SRC-016 | https://godotengine.org/download/archive/ | Archivo vivo; consulta 27-11-2026 | Fuente oficial del motor | 4.7.2 figura estable; 4.8 beta5 publicada 24-11-2026 y aún pre-release | Alta |
+| SRC-017 | https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_android.html | Documentación estable; consulta 27-11-2026 | Documentación oficial | Exportación estable: JDK 17, Platform 35, Build-Tools 35.0.1, NDK r28b y CMake 3.10.2.4988404 | Alta para versión documentada |
+| SRC-018 | https://docs.godotengine.org/en/latest/tutorials/export/exporting_for_android.html | Documentación latest/unstable; consulta 27-11-2026 | Documentación oficial pre-release | Godot 4.8 introduce setup automático y documenta Platform 36, Build-Tools 36.1.0, NDK 29.0.14206865 y CMake 3.22.1 | Alta para latest; no trasladar automáticamente a 4.7 estable |
+| SRC-019 | https://developer.android.com/google/play/requirements/target-sdk | Página vigente; consulta 27-11-2026 | Documentación oficial Android | Desde 31-08-2026, nuevas apps y actualizaciones deben targetear API 36 para Google Play | Alta |
+| SRC-020 | https://firebase.google.com/pricing | Página viva; consulta 27-11-2026 | Precio oficial | Realtime Database Spark: 100 conexiones simultáneas, 1 GB y 10 GB/mes; Blaze factura uso adicional | Alta |
+| SRC-021 | https://firebase.google.com/docs/database/usage/limits | Página viva; consulta 27-11-2026 | Documentación oficial | Spark limita conexiones simultáneas a 100; Blaze hasta 200.000 por base de datos | Alta |
+| SRC-022 | https://fly.io/docs/about/pricing/ | Tarifas efectivas desde 01-10-2026; consulta 27-11-2026 | Documentación oficial | Compute por segundo; máquina mínima always-on desde aproximadamente 2,19 USD/30 días en regiones más baratas, almacenamiento/egress aparte | Alta; depende de región |
+| SRC-023 | https://docs.colyseus.io/ | Documentación v0.18; consulta 27-11-2026 | Documentación oficial del proyecto | Framework Node.js open source, servidor autoritativo, rooms, matchmaking, sincronización y SDK Godot | Alta para capacidades declaradas |
+| SRC-024 | https://heroiclabs.com/nakama/ | Página viva; consulta 27-11-2026 | Fuente oficial del proyecto | Nakama open source, servidor de juego con lógica autoritativa, chat y funciones sociales; requiere hosting propio o servicio gestionado | Alta para capacidades declaradas |
 
 ## Historial
-- 26-11-2026: observación de portada y términos; inicialmente no había partida inspeccionada.
-- 26-11-2026: nueva grabación de sesión autenticada aportada por el usuario; se documentó el mapa Camagüey y un conjunto amplio de módulos. Se excluyeron identificadores y datos de cuenta.
-- 26-11-2026: se añadió fuente secundaria que informa de sistemas aún no confirmados.
+- 26-11-2026: observación de portada/términos y revisión de grabación autenticada aportada por el propietario.
+- 27-11-2026: reconsulta de portada y términos; no cambió la fecha de actualización legal.
+- 27-11-2026: revalidación de Godot/Android, límites de hosting y alternativas de backend.
+- La documentación de proveedores es dinámica. Volver a comprobar límites y precios antes de cada despliegue o presupuesto.
