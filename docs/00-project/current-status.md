@@ -1,47 +1,49 @@
 # Estado actual del proyecto
 
-**Corte:** 26-11-2026  
+**Corte:** 27-11-2026  
 **Fase:** 0 — investigación y preproducción  
 **Implementación:** no iniciada  
-**Plataforma objetivo:** aplicación Android instalable; APK para QA y AAB cuando corresponda a distribución.
+**Plataforma principal:** Android instalable (APK para QA; AAB para Google Play cuando corresponda).
 
-## Qué se ha hecho
-- Repositorio público preparado con estructura de investigación, diseño, arquitectura, producción y agentes.
-- Inspección de la portada y términos oficiales de CubitaLife.
-- Revisión de una grabación de sesión autenticada aportada por el propietario en Android/Chrome.
-- Documentación de un mapa urbano isométrico de Camagüey, avatar/HUD, necesidades, cartera, misiones y teléfono virtual.
-- Apertura visual de pantallas de trabajo, vivienda, muebles, negocios, mercado, inventario, inversiones, banco, salud, comida, pareja/familia, viajes, ciudad, música, relojes, anuncios y CubaGram.
-- Separación explícita entre pantalla observada y acción/operación no probada.
-- Registro de afirmaciones secundarias no verificadas como preguntas pendientes.
-- Investigación inicial de WebSockets y opciones gratuitas de Vercel, Cloudflare, Render y Supabase.
+## Estado del repositorio
+- Rama principal: `main`, último commit revisado: `de5cd1022183e0c3d5c30368d29e9d9e6dafb7c7` (26-11-2026, análisis de términos/monetización).
+- PR #4 `research/cubitalife-session-audit-2026-11-26` sigue abierto, sin merge, con 17 archivos modificados; es mergeable según la lectura de GitHub al 27-11-2026.
+- Este trabajo se desarrolla en una rama apilada sobre la rama del PR #4 para conservar su evidencia; no se modifica `main`.
+- El árbol de la rama de auditoría contiene 88 entradas; el árbol de `main`, 86 entradas en la revisión actual.
+- No hay implementación jugable, APK, backend ni despliegue.
 
-## Qué se ha verificado
-- La experiencia web se mostró funcionando en Chrome móvil durante la grabación aportada.
-- El mundo de esa sesión estaba en Camagüey; la portada pública también puede mostrar La Habana.
-- La interfaz contiene cuatro necesidades: energía, comida, humor y salud.
-- El teléfono actúa como hub de múltiples subsistemas de juego.
-- Hay pantallas dedicadas a profesión/economía, vivienda/vida diaria, social/familia, viajes/ciudad y entretenimiento.
-- Los detalles de pantallas y textos están registrados en evidence/observations/session-android-2026-11-26.md.
+## Qué está confirmado
+- La portada pública reconsultada el 27-11-2026 sigue mostrando HUD de ejemplo, cuatro necesidades, navegación Explorar/Trabajo/Estudiar/Mi casa/Viajar por Cuba, escena de La Habana, chat y controles de cámara.
+- Los términos oficiales consultados el 27-11-2026 indican última actualización 12-11-2026; declaran 18+, reglas de cuenta/dispositivo, monedas ficticias, diamantes, Stripe, reembolsos, datos y anuncios.
+- La grabación aportada por el propietario el 26-11-2026 muestra una sesión autenticada en Chrome/Android: mapa isométrico de Camagüey, avatar/otros jugadores, HUD, teléfono virtual y pantallas de múltiples subsistemas.
+- La sesión permite confirmar pantallas y textos, no operaciones económicas o sociales completadas.
 
-## Qué NO se ha verificado
-- No se probaron movimientos, colisiones, cámara interactiva ni capacidad concurrente.
-- No se completaron compras, ventas, inversiones, apuestas, transferencias, contrataciones, adopciones, viajes o publicaciones.
-- No se probó el efecto de botones, cálculos económicos, ciclos de necesidades, persistencia, sincronización o reconexión.
-- No se inspeccionaron APIs, código fuente privado, motor, base de datos ni infraestructura de CubitaLife.
-- No se comprobó una app Android nativa; el vídeo muestra Chrome móvil.
-- No hay cliente, servidor ni APK implementados.
+## Qué sigue pendiente
+- Registro/login real, validaciones, recuperación y primera creación de personaje.
+- Primer spawn, tutorial, condiciones iniciales y variación entre cuentas.
+- Movimiento táctil, rotación/zoom efectivos, colisiones, selección de lugares y entrada/salida de edificios.
+- Cambios temporales de necesidades, wallet, misiones y persistencia.
+- Efectos completos de empleo, cursos, vivienda, comercio, viajes y salud.
+- Privacidad, ajustes, bloqueo/reporte, chat y mensajes privados.
+- App Android nativa: la grabación demuestra Chrome móvil, no una app nativa.
+- Motor, backend, base de datos, APIs y protocolo privados de CubitaLife siguen desconocidos.
+
+## Investigación técnica revalidada
+- Godot 4.7.2 es la versión estable publicada más reciente consultada; Godot 4.8 está en beta5 al 24-11-2026.
+- Godot 4.7 documenta JDK 17 y un conjunto de herramientas Android basado en SDK 35; Google Play exige target API 36 para nuevas apps/actualizaciones desde 31-08-2026. La combinación exacta debe probarse.
+- Vercel WebSockets pasó a GA el 20-10-2026, pero cada conexión depende de la duración máxima de Function y del estado externo.
+- Cloudflare Workers/DO, Supabase, Render y Fly.io tienen cuotas, límites o gasto potencial; ninguno se considera producción gratuita ilimitada.
+
+## Bloqueos
+1. No hay una sesión autenticada del propietario disponible para esta ejecución; no se accedió a la cuenta ni se usaron credenciales. La grabación anterior cubre solo un recorrido de pantallas.
+2. La evidencia de onboarding, spawn y controles requiere una captura nueva y redactada del propietario.
+3. No se ha hecho benchmark en teléfono Android real ni prueba de carga del backend.
+4. Edad, licencia, marca, privacidad, moderación y monetización propias siguen pendientes de aprobación.
 
 ## Próximos hitos
-1. Completar walkthrough seguro de movimiento/edificios y transiciones.
-2. Verificar ciclos de necesidades, empleo/formación, vivienda, compra/venta y viajes mediante observación antes/después; no gastar saldos ni publicar sin autorización.
-3. Cerrar matriz de paridad v1 y GDD Android por subsistema.
-4. Validar ADR de motor y backend mediante prototipos.
-5. Crear prototipo local de avatar, cámara, controles táctiles y zona original.
-6. Añadir identidad, persistencia y primera conexión multijugador.
-7. Implementar la línea base de capacidades priorizadas antes de mejoras propias.
-
-## Bloqueos / límites
-- La inspección se basa en una sesión/una cuenta; la disponibilidad puede variar entre jugadores.
-- El juego declara ser para mayores de 18 años; SIMS CUBA LBA necesita definir su propia política de edad y seguridad.
-- La política de privacidad, moderación, marca y licencia siguen pendientes.
-- La grabación original no se publica en Git porque contiene identificadores del jugador y nombres de terceros.
+1. Completar el plan de captura de onboarding, spawn, movimiento, cámara y transiciones.
+2. Completar observaciones no destructivas de HUD/necesidades, ajustes y privacidad.
+3. Cerrar matriz de paridad v1 y GDD, separando observación y propuesta.
+4. Probar exportación Godot estable con target API 36 y perfilar dispositivo real.
+5. Ejecutar spike de backend con carga, reconexión, costes y latencia de regiones objetivo.
+6. Solo después, iniciar el vertical slice original.
