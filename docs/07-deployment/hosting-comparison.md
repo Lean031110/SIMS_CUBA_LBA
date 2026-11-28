@@ -1,4 +1,4 @@
-# Comparativa de hosting — revalidada 27-11-2026
+# Comparativa de hosting — revalidada 28-11-2026
 
 Los límites, precios y planes cambian. “Gratis” significa cuotas y condiciones; no equivale a SLA, disponibilidad continua ni producción ilimitada.
 
@@ -10,8 +10,8 @@ Los límites, precios y planes cambian. “Gratis” significa cuotas y condicio
 | Firebase Realtime Database Spark | 100 conexiones simultáneas, 1 GB almacenado y 10 GB/mes descargados | Realtime simple; Blaze permite hasta 200k conexiones por base y factura excedentes | Alternativa de prototipo pequeño de presencia/chat; reglas, descargas y costes deben controlarse |
 | Render Free | 750 horas/mes por workspace; spin-down tras 15 min; arranque ~1 min; Postgres Free expira a 30 días | Servicios web y DB de demostración | Solo pruebas; filesystem efímero y suspensión lo descartan como mundo persistente |
 | Fly.io | Máquina always-on mínima desde aprox. 2,19 USD/30 días (256 MB) en regiones de menor coste; disco y egress aparte | Máquinas por segundo, regiones y almacenamiento persistente | Opción de bajo coste pagada para un servidor dedicado de prueba; no es Free |
-| Colyseus self-hosted | Framework open source; el coste es la máquina/operación | Rooms, matchmaking, sincronización autoritativa y SDK Godot | Candidato a servidor de juego dedicado si el spike de DO no cubre el modelo |
-| Nakama self-hosted | Backend open source; el coste es la máquina/operación | Autenticación, lógica autoritativa, chat y funciones sociales | Candidato más completo para backend de juego/social; revisar consumo y complejidad |
+| Colyseus self-hosted | Framework open source; el coste es la máquina/operación | Rooms y sincronización; la GDExtension Godot está en beta y el Native SDK sigue en desarrollo | Candidato de spike, no integración asumida como estable; validar Android y breaking changes |
+| Nakama self-hosted | Backend open source; el coste es la máquina/operación | Auth, lógica autoritativa, chat/social; guía oficial Godot 4 con sockets y matches autoritativos | Candidato de spike; validar versión del SDK, Android y recursos reales |
 
 ## Hallazgos que cambian la evaluación
 
@@ -34,6 +34,12 @@ Los límites, precios y planes cambian. “Gratis” significa cuotas y condicio
 ### Render y Fly.io
 - Render Free no mantiene un servidor de juego siempre encendido y su Postgres Free expira a los 30 días.
 - Fly.io es una alternativa de pago por uso, no una opción gratis; el precio final depende de región, RAM, almacenamiento, IP y transferencia.
+
+## Revalidación 28-11-2026
+- Godot 4.8 RC 1 ya está publicado, pero sigue siendo pre-release; el toolchain API 36 de la guía latest no debe tratarse como prueba de exportación del RC.
+- Colyseus sí lista Android, pero su GDExtension Godot está en beta; no usarlo como supuesto de producción sin una prueba nativa.
+- Nakama tiene una guía oficial de cliente Godot 4 y soporte de matches server-authoritative; la compatibilidad exacta del SDK con el motor que se elija sigue PENDING.
+- El plan común de comparación está en [backend-spike-plan.md](../04-technical-architecture/backend-spike-plan.md).
 
 ## Recomendación por etapa
 - Web pública, landing y documentación: Vercel o Cloudflare Pages.
