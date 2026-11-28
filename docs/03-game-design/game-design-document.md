@@ -1,6 +1,6 @@
 # Game Design Document — borrador de preproducción
 
-**Revisión:** 27-11-2026  
+**Revisión:** 28-11-2026  
 **Estado:** PROPOSAL. Este documento describe el diseño propio de SIMS CUBA LBA; no afirma conocer las mecánicas internas no probadas de CubitaLife.
 
 ## Fantasía principal
@@ -32,6 +32,9 @@ La sesión aportada el 26-11-2026 permite confirmar visualmente pantallas y mód
 | Chat y mensajes privados | Chat visible en portada; DM DOCUMENTED por términos | Envío, entrega, moderación y privacidad PENDING |
 | Primer registro, personaje, spawn y tutorial | PENDING | No diseñar un flujo de paridad cerrado hasta capturar la primera entrada |
 | Movimiento táctil, cámara efectiva y transiciones | PENDING | Gate de locomoción antes de fijar controles y mapa |
+
+## Nota de evidencia y gates — 28-11-2026
+No se obtuvo una nueva sesión funcional de CubitaLife en esta revisión. Las filas de referencia no cambian de estado. La especificación del bucle base sigue bloqueada por onboarding, spawn y locomoción observables. En lo técnico, el gate Android compara Godot 4.7.2 estable con 4.8 RC 1; el backend sigue sujeto al spike comparativo. Ver [ADR-001](../04-technical-architecture/decision-records/ADR-001-godot-android.md), [ADR-002](../04-technical-architecture/decision-records/ADR-002-realtime-backend.md) y [plan de spike](../04-technical-architecture/backend-spike-plan.md).
 
 ## Bucles propuestos
 - Corto: entrar → revisar estado → elegir actividad → recibir resultado → actualizar estado.
