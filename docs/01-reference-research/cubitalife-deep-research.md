@@ -35,3 +35,7 @@ No se conocen las fórmulas de necesidades, salarios, ascensos, estudios, alquil
 
 ## 6. Uso permitido
 Documentar capacidades y flujos observables para diseñar una alternativa independiente. No copiar código, recursos, modelos, texturas, música, marca, textos expresivos ni composición visual identificable. Las afirmaciones de fuentes secundarias sobre spawn aleatorio, remesas periódicas, delitos o sanciones siguen PENDING hasta evidencia primaria.
+
+
+## Seguimiento 28-11-2026
+No se obtuvo evidencia interactiva nueva ni se accedió a la cuenta del propietario. La grabación del 26-11 sigue siendo la única evidencia visual de sesión para esta investigación. No se promueven funciones a comportamiento confirmado. La prioridad permanece en onboarding, primer spawn, locomoción, cámara y transiciones, según el plan de captura.

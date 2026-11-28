@@ -14,13 +14,16 @@
 - [ ] ¿Qué entra en la paridad v1 y qué se deja para etapas posteriores?
 
 ## Android
-- [ ] ¿Puede Godot 4.7.2 estable exportar un APK con target API 36 usando plantilla oficial?
+- [ ] ¿Puede Godot 4.7.2 estable exportar un APK con target API 36 usando plantilla oficial o Gradle reproducible?
+- [ ] ¿Godot 4.8 RC 1 exporta API 36 con el toolchain latest y qué regresiones tiene frente a 4.7.2?
 - [ ] Si no, ¿basta Gradle personalizado o habrá que esperar a Godot 4.8 estable?
 - [ ] ¿Qué Android mínimo, RAM/GPU, FPS, tamaño APK y orientación son viables?
 - [ ] ¿Qué gestos táctiles resultan naturales y accesibles en el dispositivo objetivo?
 
 ## Backend y operación
 - [ ] ¿Cloudflare DO Hibernation o Colyseus/Nakama self-hosted soporta mejor las zonas autoritativas?
+- [ ] ¿La GDExtension beta de Colyseus funciona en Android arm64 con la versión Godot elegida?
+- [ ] ¿Qué versión del SDK Nakama Godot 4 se fija y qué límites tiene en Android?
 - [ ] ¿Qué base persistente ofrece transacciones/backup/exportación adecuados para wallet e inventario?
 - [ ] ¿Qué región ofrece menor p95 desde redes de Cuba?
 - [ ] ¿Cuántos mensajes por jugador/minuto y cuántos usuarios concurrentes se esperan en alpha/beta?
@@ -33,3 +36,8 @@
 - ¿Licencia del código y assets?
 - ¿Quién moderará y responderá incidencias?
 - ¿Habrá monetización y en qué regiones/proveedor?
+
+
+## Revisión 28-11-2026
+- [ ] ¿Qué versión estable de Godot será la primera que pase API 36 y benchmark físico?
+- [ ] ¿Qué latencia p95/jitter es aceptable desde redes cubanas después de medir la conexión real?

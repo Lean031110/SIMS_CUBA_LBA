@@ -14,8 +14,10 @@ Revisar el estado, identificar el vacío que más desbloquea el proyecto y conti
 8. No registrar contraseñas, correos completos, tokens, saldos privados, chats ni datos de terceros.
 9. Revalidar SDKs, versiones, cuotas, precios y límites antes de tomar decisiones técnicas o desplegar.
 10. Revisar contradicciones, enlaces rotos, duplicados, estado de PR y vigencia de las fuentes.
-11. Si hay escritura, crear/usar una rama research/fecha-tema, revisar diff y abrir PR; no hacer merge automático.
-12. Reportar lo nuevo verificado, cambios, pendientes, bloqueos y siguiente experimento.
+11. Para Android, distinguir release estable, RC/beta y documentación latest; no copiar toolchain entre versiones sin probarlo.
+12. Para SDKs de terceros, registrar madurez (stable/beta), plataformas listadas, versiones y breaking changes antes de recomendar integración.
+13. Si hay escritura, crear/usar una rama research/fecha-tema, revisar diff y abrir PR; no hacer merge automático.
+14. Reportar lo nuevo verificado, cambios, pendientes, bloqueos y siguiente experimento.
 
 ## Prioridad
 A. Onboarding/personaje/spawn/movimiento/cámara. B. HUD/necesidades/cartera. C. Trabajo/estudio. D. Vivienda/muebles. E. Negocios/mercado/inventario. F. Viajes/ciudad. G. Social/CubaGram/chat y moderación. H. Ajustes/privacidad/Android. I. Godot toolchain/API target. J. Backend, carga, coste y latencia.

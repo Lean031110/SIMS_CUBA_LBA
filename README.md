@@ -2,7 +2,7 @@
 
 > Investigación, diseño y preparación técnica de un simulador social de vida ambientado en Cuba. Android instalable es la plataforma principal.
 
-**Estado al 27-11-2026:** fase 0 — investigación y preproducción. No hay código jugable, servidor, APK ni despliegue del juego.
+**Estado al 28-11-2026:** fase 0 — investigación y preproducción. No hay código jugable, servidor, APK ni despliegue del juego.
 
 **Referencia funcional pública:** https://cubitalife.com/  
 **Repositorio:** https://github.com/Lean031110/SIMS_CUBA_LBA  
@@ -19,8 +19,8 @@ Crear un simulador social de vida cubana con capacidades funcionales comparables
 - El propietario debe aportar una nueva grabación de su sesión legítima para cerrar esos puntos. Ver [plan de captura](evidence/observations/next-session-capture-plan-2026-11-27.md).
 
 ## Arquitectura provisional
-- Cliente: Godot 4.7.2 estable + GDScript como candidato; validar exportación Android y rendimiento en dispositivo real.
-- Android: objetivo de publicación exige target API 36 desde el 31-08-2026. Debe probarse la combinación exacta de Godot, SDK y plantilla antes de fijarla.
+- Cliente: Godot 4.7.2 estable como baseline y Godot 4.8 RC 1 como comparación experimental; ambos requieren gate Android API 36 y benchmark real. 4.8 RC 1 es pre-release, no versión de producción.
+- Android: Google Play exige target API 36 desde el 31-08-2026. La guía estable de Godot lista Platform 35, mientras latest (inestable, desde 4.8) lista Platform 36 / Build-Tools 36.1.0 / NDK 29 / CMake 3.22.1. Comparar versiones y verificar el APK real antes de fijar toolchain.
 - Backend piloto: Cloudflare Workers + Durable Objects/SQLite es un candidato; la persistencia global (D1, DO SQLite o PostgreSQL) no está decidida.
 - Alternativa de servidor de juego: comparar Colyseus o Nakama self-hosted, que requieren una máquina y operación propias.
 - Vercel WebSockets ya es GA desde 20-10-2026; las conexiones siguen sujetas a duración de Function y requieren reconexión/estado externo.
@@ -29,7 +29,7 @@ Crear un simulador social de vida cubana con capacidades funcionales comparables
 ## Orden de trabajo
 1. Cerrar evidencia de onboarding, spawn, movimiento/cámara y flujos no destructivos.
 2. Convertir evidencia en matriz de paridad y GDD aprobado.
-3. Probar exportación Android target API 36 y benchmark gráfico/térmico.
+3. Comparar exportación Android API 36 en Godot 4.7.2 estable y 4.8 RC 1; inspeccionar manifiesto y ejecutar en dispositivos reales.
 4. Hacer spike de backend y carga; medir latencia desde las regiones objetivo.
 5. Construir un vertical slice original solo después de superar los gates.
 

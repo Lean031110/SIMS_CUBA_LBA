@@ -1,4 +1,4 @@
-# Backlog de investigación y producción — revisión 27-11-2026
+# Backlog de investigación y producción — revisión 28-11-2026
 
 ## P0 — cerrar evidencia y gates
 
@@ -18,19 +18,19 @@
 
 ## P1 — decisiones técnicas bloqueantes
 
-- [ ] T-01 Exportar proyecto mínimo Godot 4.7.2 a APK con target API 36; inspeccionar manifiesto.
+- [ ] T-01 Comparar proyecto mínimo Godot 4.7.2 estable y 4.8 RC 1 con target API 36; inspeccionar ambos manifiestos y registrar templates/toolchain.
 - [ ] T-02 Instalar y ejecutar APK en Android 16 real y un Android anterior.
 - [ ] T-03 Benchmark de controles, FPS, RAM, temperatura, batería y tamaño de build en dispositivo modesto y medio.
 - [ ] T-04 Spike Cloudflare Workers + DO WebSocket Hibernation y persistencia SQLite/D1.
-- [ ] T-05 Comparar Colyseus o Nakama self-hosted para una zona autoritativa.
+- [ ] T-05 Ejecutar spike comparativo Cloudflare DO / Colyseus / Nakama según backend-spike-plan.md; validar SDK Godot beta/Android y servidor autoritativo.
 - [ ] T-06 Prueba de carga 20/50/100 clientes; medir p50/p95, mensajes, reconexión, errores y coste.
 - [ ] T-07 Medir latencia desde redes que representen Cuba y probar pérdida/jitter.
 - [ ] T-08 Definir política de backups, restore, exportación y presupuesto.
 
 ## Gates antes del vertical slice
 - [ ] G-01 Evidencia de onboarding/primer spawn y locomoción suficiente para definir el bucle base.
-- [ ] G-02 Godot/Android exporta con target API 36 y corre en dispositivo real.
-- [ ] G-03 Backend elegido tras spike, reconexión y prueba de carga.
+- [ ] G-02 Una versión estable aprobada exporta target API 36, pasa manifiesto y corre en dispositivo real; RC solo sirve como evidencia experimental hasta ser estable.
+- [ ] G-03 Backend elegido tras spike común, reconexión, restauración y prueba de carga; integración Android del SDK verificada.
 - [ ] G-04 GDD y paridad v1 revisados; decisiones de edad, licencia, marca y pagos siguen bajo aprobación separada.
 
 ## P2 — vertical slice original (bloqueado por gates)
@@ -64,3 +64,9 @@
 - [ ] X-02 Más profundidad profesional y de negocios.
 - [ ] X-03 Accesibilidad y bajo consumo/datos.
 - [ ] X-04 Eventos, accesibilidad, personalización y progresión ampliada.
+
+
+## Actualización 28-11-2026
+- [ ] T-09 Mantener Godot 4.8 RC 1 en comparación experimental; revisar release estable antes de fijar motor.
+- [ ] T-10 Validar en Android arm64 el GDExtension beta de Colyseus y el SDK Godot 4 de Nakama antes de decidir backend.
+- [ ] T-11 Medir RTT/jitter/pérdida desde red objetivo cubana; no extrapolar desde región de nube.

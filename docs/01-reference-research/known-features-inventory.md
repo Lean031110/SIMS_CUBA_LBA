@@ -1,6 +1,6 @@
 # Inventario de funciones y estado de evidencia
 
-**Corte:** 27-11-2026. Estado principal limitado a CONFIRMED, DOCUMENTED, HYPOTHESIS, PROPOSAL o PENDING.
+**Corte:** 28-11-2026. Estado principal limitado a CONFIRMED, DOCUMENTED, HYPOTHESIS, PROPOSAL o PENDING.
 
 | ID | Área | Hallazgo | Estado | Alcance / siguiente comprobación |
 |---|---|---|---|---|
@@ -51,3 +51,7 @@
 - Los valores numéricos de una sesión no son constantes de diseño.
 - Las mecánicas de fuentes secundarias sobre spawn aleatorio, remesas periódicas, delitos y sanciones siguen PENDING.
 - No convertir filas en requisitos implementables hasta conocer precondición, acción, resultado, error y persistencia.
+
+
+## Revisión 28-11-2026
+No se obtuvo una nueva sesión ni una nueva grabación de CubitaLife en esta revisión. Ninguna mecánica cambia de estado; las pantallas siguen separadas de las acciones y de la persistencia. La próxima evidencia prioritaria continúa siendo onboarding/personaje/spawn y locomoción táctil.
