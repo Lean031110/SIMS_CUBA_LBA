@@ -43,10 +43,13 @@ Fuentes oficiales: Vercel, Supabase, Firebase, Render y Fly.io listadas en evide
 
 ## Alternativas self-hosted de juego
 
-- **Colyseus:** framework Node.js open source con rooms, matchmaking, sincronización de estado y SDK Godot. Adecuado para probar rooms autoritativas en un proceso dedicado. Requiere VPS/servidor, base de datos, monitorización y operación propia. https://docs.colyseus.io/
-- **Nakama:** backend open source para juegos con autenticación, lógica autoritativa, chat y sistemas sociales. Más completo, pero añade operación y configuración; revisar integración concreta con Godot y recursos de servidor. https://heroiclabs.com/nakama/
+- **Colyseus:** framework Node.js open source con rooms, matchmaking y sincronización. La documentación v0.18 lista Android, pero advierte que su GDExtension Godot está en beta y que el Native SDK sigue en desarrollo con posibles breaking changes. Requiere servidor, base de datos, monitorización y operación propia. PENDING hasta probar exportación Android y compatibilidad con la versión de Godot elegida. https://docs.colyseus.io/getting-started/godot
+- **Nakama:** backend open source con autenticación, lógica autoritativa, chat y sistemas sociales. Heroic Labs mantiene guía de cliente Godot 4 con sockets realtime y matches server-authoritative/relayed. PENDING hasta validar versión exacta del SDK, exportación Android y consumo de recursos. https://heroiclabs.com/docs/nakama/client-libraries/godot/
 
 Self-hosted significa que el software puede ser gratuito; la máquina, almacenamiento, tráfico, copias y mantenimiento no lo son necesariamente.
+
+## Plan de comparación reproducible
+Seguir [backend-spike-plan.md](../backend-spike-plan.md). Comparar la misma zona, el mismo protocolo y perfiles sintéticos de 20/50/100 clientes. Medir p50/p95/p99, tráfico, CPU/RAM, reconexión, consistencia, recuperación y coste. No ejecutar economía ni chat real en este spike.
 
 ## Recomendación provisional
 No elegir aún una plataforma final. Ejecutar un spike comparativo:
