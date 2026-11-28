@@ -21,3 +21,7 @@ Abstraer repositorios y eventos para migrar D1/DO SQLite a PostgreSQL y Durable 
 
 ## Gate
 No elegir persistencia ni proveedor hasta probar operaciones atómicas del ledger, idempotencia, recuperación de sala, reconexión, backups y restore. Consultar ADR-002 y hosting-comparison.md para límites y alternativas.
+
+
+## Spike comparativo
+El proveedor de zona y el SDK cliente siguen sin decidir. Seguir [backend-spike-plan.md](backend-spike-plan.md) para comparar Cloudflare DO, Colyseus y Nakama con el mismo protocolo, clientes sintéticos, métricas de latencia/recuperación/coste y pruebas de fallo. La GDExtension de Colyseus para Godot figura en beta; no asumir estabilidad Android.
