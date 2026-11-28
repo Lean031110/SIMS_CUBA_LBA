@@ -3,8 +3,10 @@
 ## Objetivo
 Cerrar evidencia funcional de CubitaLife con observación legítima y convertirla en requisitos independientes de SIMS CUBA LBA.
 
+**Última revisión:** 28-11-2026.
+
 ## Prioridad actual
-El recorrido del 26-11 abrió muchos módulos, pero empezó con la partida ya cargada. El vacío que más desbloquea es **onboarding → personaje → spawn → movimiento/cámara → edificio/transición**. Sin eso no se puede especificar el bucle básico de juego ni el control táctil Android.
+El recorrido del 26-11 abrió muchos módulos, pero empezó con la partida ya cargada. No hubo nueva sesión en la revisión del 28-11. El vacío que más desbloquea es **onboarding → personaje → spawn → movimiento/cámara → edificio/transición**. Sin eso no se puede especificar el bucle básico de juego ni el control táctil Android.
 
 ## Orden de recorrido
 1. Portada, registro/login, validaciones y recuperación (sin mostrar credenciales).
