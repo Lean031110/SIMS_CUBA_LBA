@@ -18,8 +18,8 @@
 | Android build | docs/05-platforms/android-build-release.md | Comparación 4.7.2 / 4.8 RC API 36 |
 | Evidencia de plataforma | evidence/platform-revalidation-2026-11-28.md | Revalidación oficial 28-11 |
 | Spike backend | docs/04-technical-architecture/backend-spike-plan.md | Protocolo de benchmark; no ejecutado |
-| Hosting | docs/07-deployment/hosting-comparison.md | Revalidado 27-11 |
+| Hosting | docs/07-deployment/hosting-comparison.md | Revalidado 28-11 |
 | Backlog | docs/06-production/task-backlog.md | Priorizado por gates |
-| Fuentes | evidence/source-register.md | Actualizado 27-11 |
+| Fuentes | evidence/source-register.md | Actualizado 28-11 |
 
 Ruta recomendada: README → AGENTS → current-status → plan de captura → observación de sesión → inventario → GDD → ADR → backlog.
