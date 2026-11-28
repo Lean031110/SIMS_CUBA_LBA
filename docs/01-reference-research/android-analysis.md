@@ -44,3 +44,14 @@ Antes de fijar la versión del motor:
 
 ## Pendiente de dispositivo
 Definir versión mínima de Android, RAM/GPU objetivo, tamaño APK, FPS target, resolución, política de orientación y requisitos offline mediante benchmark de una primera escena original en un teléfono real.
+
+
+## Revalidación del toolchain — 28-11-2026
+- **DOCUMENTED:** Godot 4.8 RC 1 fue publicado el 27-11-2026 y sigue marcado pre-release; 4.7.2 continúa como estable en el archivo oficial.
+- **DOCUMENTED:** la guía estable de exportación sigue listando Platform 35 / Build-Tools 35.0.1 / NDK r28b / CMake 3.10.2.4988404.
+- **DOCUMENTED:** la guía latest, explícitamente inestable, documenta desde Godot 4.8 setup automático y Platform 36 / Build-Tools 36.1.0 / NDK 29 / CMake 3.22.1.
+- **DOCUMENTED:** Google Play exige target API 36 desde el 31-08-2026.
+- **PROPOSAL:** comparar 4.7.2 estable y 4.8 RC 1 con el mismo proyecto mínimo, verificar targetSdkVersion en el APK e instalar en Android 16 y un Android anterior. No adoptar RC para producción sin versión estable y pruebas.
+- **PENDING:** no se ha instalado/exportado nada ni probado un dispositivo en esta revisión.
+
+Ver [revalidación de plataforma](../../evidence/platform-revalidation-2026-11-28.md) y [ADR-001](../04-technical-architecture/decision-records/ADR-001-godot-android.md).
